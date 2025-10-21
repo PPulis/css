@@ -1,0 +1,20 @@
+<h2> - Signal: The app name is retrieved using signal() {{title()}} </h2>
+<h2> - Property Binding:  This is <strong [style.color]="colour">part</strong> of the todo application we are building in this exercise. </h2>
+<h2> - Interpolation: Another way of styling is through <strong style.color={{colour}}>interpolation</strong>  </h2>
+<ul>
+  @if (todos.length === 0) {
+    <li> No todos available </li>
+  } @else {
+    @for (item of todos; track item.id) {
+    <li> 
+      <span>{{item.id}} - {{item.title}}</span>
+      <span>
+        <input type="checkbox" [checked]="item.completed" />
+        <button> Edit </button>
+        <button (click)="deleteTodo()"> Delete </button>
+      </span>
+    </li>
+    }
+  }
+</ul>
+<router-outlet></router-outlet>

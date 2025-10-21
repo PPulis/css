@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: "Centuty Gothic", sans-serif;
+    margin: 0px;
+    padding: 5vw;
+    background-color: #111;
+    color: #09f;
+    animation: fadeIn 800ms ease-in forwards;
+}
+h1 {
+    font-weight: 100;
+    font-variant: small-caps; 
+    text-align: center;
+}
+h2{
+    font-weight: 100;
+    font-variant: small-caps; 
+    text-align: center;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

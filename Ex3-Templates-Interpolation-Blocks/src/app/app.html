@@ -1,0 +1,26 @@
+<h1>This is {{title()}}</h1>
+
+<h2>Understanding Templates</h2>
+<hr>
+<p> This is an example of a template. It can be inline or referred to as an external file as shown here. (use TemplateUrl) </p>
+<br>
+<h2>Interpolation Examples</h2>
+<hr>
+<p> Templates can include interpolation expressions using double {{curly}} braces to bind data from the component class to the template. </p>
+
+<p> Example 1: We can display numOne using interpolation:  {{numOne}} ... we can also display numTwo using interpolation:  {{numTwo}}  </p>
+<p> Example 2: We can also perform arithmetic operations: {{numOne}} + {{numTwo}} = {{numOne + numTwo}} </p>
+<br>
+<h2>Block Directives Examples</h2>
+<hr>
+<p> Templates can also include block directives for conditional rendering and loops. </p>
+@if (showMessage()) {
+  <p>The showMessage signal is true, so this message is displayed.</p>
+} @else {
+  <p>The showMessage signal is false, so this message is hidden.</p>
+}
+
+<p> Iteration is also something that they can include likeso: </p>
+@for (item of items(); track item) {
+    <div> Item at Index: {{ $index }} - Value: {{ item }}</div>
+}

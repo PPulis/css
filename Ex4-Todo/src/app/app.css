@@ -1,0 +1,36 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+input[type="checkbox"] {
+    margin-right: 1rem;
+    background-color: #444;
+    color:#09f;
+}
+button{
+    background-color: #09f;
+    color: white;
+    border: none;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin:0.2rem;
+}
+
+button:hover{
+    background-color: #0077cc;
+    transition: background-color 0.3s;
+}

@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Century Gothic';
+  background-color: #111;
+  color: #09f;
+  padding:4rem;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+h1{
+    font-weight: 100;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

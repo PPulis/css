@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Lifecycle of <u>{{title()}}</u></h2>
+  <p>The lifecycle of an Angular application involves several key phases:</p>
+  <ol>
+    <li><strong>Bootstrap:</strong> The application starts by bootstrapping the root module, which initializes the application.</li>
+    <li><strong>Component Rendering:</strong> The root component is rendered, and any child components are initialized and rendered as needed.</li>
+    <li><strong>Data Binding:</strong> Angular's data binding mechanism connects the component's data to the template, allowing for dynamic updates.</li>
+    <li><strong>Change Detection:</strong> Angular continuously monitors for changes in the application state and updates the view accordingly.</li>
+  </ol>
+
+  <h2>Sequence of Events When Running the Application</h2>
+  <p>When the Angular application is run, the following sequence of events occurs:</p>
+  <ol>
+    <li>The application is bootstrapped using the <strong>bootstrapApplication</strong> function in <strong>main.ts</strong>.</li>
+    <li>The root component (<strong>App</strong>) is loaded and rendered in the <strong>index.html</strong> file.</li>
+    <li>Any additional components or services defined in the application are initialized and rendered as needed.</li>
+  </ol>
+</div>
+
+<router-outlet />
