@@ -7,6 +7,8 @@ Folders:
 - `Ex2-Components` – Building and composing standalone components (parent/children)
 - `Ex3-Templates-Interpolation-Blocks` – Modern template syntax: interpolation and block directives
 - `Ex4-Todo` – Todo App (Part 1): list UI with property binding, interpolation, and control flow
+- `Ex5-Show-Hide-Image` – Conditional rendering and events to toggle an image with dynamic styling
+- `Ex6-Two-Way-Data-Binding` – Manual two-way effect using event binding + interpolation (no ngModel)
 
 All projects target Angular 20.3.x and use standalone APIs.
 
@@ -28,6 +30,8 @@ npm start
 Then open http://localhost:4200/
 
 Repeat for the other folders by changing directory to `Ex2-Components`, `Ex3-Templates-Interpolation-Blocks`, or `Ex4-Todo`.
+
+You can also run `Ex5-Show-Hide-Image` and `Ex6-Two-Way-Data-Binding` the same way.
 
 ---
 
@@ -128,6 +132,53 @@ npm test
 ```
 
 Note: The provided unit spec is a placeholder and may need updating to match the current headings in the template.
+
+---
+
+## Ex5 – Show / Hide Image
+Purpose:
+- Demonstrate conditional rendering with `@if` and event handling to toggle an image; button label/color updates based on state.
+
+Look at:
+- `src/app/app.ts` – boolean state and toggle handler
+- `src/app/app.html` – `@if` block to show/hide image and dynamic button label
+- `public/assets/images/` – sample image assets
+
+Run:
+```bat
+cd Ex5-Show-Hide-Image
+npm install
+npm start
+```
+
+Build/Test:
+```bat
+npm run build
+npm test
+```
+
+---
+
+## Ex6 – Two‑Way Data Binding (manual)
+Purpose:
+- Show the two‑way “effect” using event binding + interpolation (without `[(ngModel)]`): typing updates component state and reflects live in the view.
+
+Look at:
+- `src/app/app.html` – input with `(keyup)="changeTitle(titleInput.value)"` and `<h1>{{ text }}</h1>`
+- `src/app/app.ts` – `text` property and `changeTitle(text: string)` method
+
+Run:
+```bat
+cd Ex6-Two-Way-Data-Binding
+npm install
+npm start
+```
+
+Build/Test:
+```bat
+npm run build
+npm test
+```
 
 ---
 
