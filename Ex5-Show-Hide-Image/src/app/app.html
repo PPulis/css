@@ -1,0 +1,16 @@
+
+<h2>{{ instructions }}</h2>
+<div class="container">
+    @if(isVisible == true){
+            <img src="./assets/images/cat.jpg" alt="A cute cat" />
+    } @else{
+        <p> Image hidden</p>
+    }
+</div>
+<br/>
+<hr/>
+<button
+    [style.backgroundColor]="isVisible ? 'red' : 'green'" 
+    (click)="showHide()">{{!isVisible ? "Show" : "Hide"}}
+</button> <!-- Ternary and it is like as if you are writing !isVisible == true -->
+<router-outlet /> <!-- Self Closing Tag -->

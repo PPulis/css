@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #111;
+    color:#09f;
+    font-family: Centuty Gothic, sans-serif;
+    padding:10%;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 100;
+    font-variant: small-caps;
+}
