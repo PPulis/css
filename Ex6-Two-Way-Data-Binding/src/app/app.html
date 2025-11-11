@@ -1,2 +1,33 @@
-<input #titleInput (keyup)="changeTitle(titleInput.value)" type="text"/>
-<h1> {{text}} </h1>
+<h1> Method 1 - combining event binding with interpolation </h1>
+<p> this example works fine when updating the actual text in the input field</p>
+<label for="firstInput">First Input: </label>
+<input #firstInput (keyup)="changeTitle(firstInput.value)" type="text"/>
+<h2>Output: {{text}} </h2>
+<br/>
+<p> Please note that when we hit the backspace on the second input field, the text in the label is not updated </p>
+<br/>
+<label for="secondInput">Second Input: </label>
+<input #secondInput (keypress)="changeSecondTitle(secondInput.value)" type="text"/>
+<h2>Output: {{secondText}} </h2>
+
+<hr/>
+
+<h1> Method 2 - Using NgModel for two-way Data Binding (The Preferred Method) </h1>
+<p> this example utilises ngModel to use a 2-way databinding approach , notice the backspace works!</p>
+<label for="thirdInput">Third Input: </label>
+<input [(ngModel)]='thirdText' type="text"/>
+<h2>Output: {{thirdText}} </h2>
+
+
+<p> Here we are updating the css properties of the box </p>
+<label for="width">Change Box  Width: </label>
+<input type="number" [(ngModel)]="width" />
+
+<br/>
+<label for="height">Change Box Height: </label>
+<input type="number" [(ngModel)]="height" />
+<div 
+[style.height.px]='height'
+[style.width.px]='width'
+class="box">
+</div>

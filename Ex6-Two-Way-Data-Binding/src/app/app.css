@@ -1,4 +1,15 @@
 input{
     border: 1px solid #09f;
     background-color: #222;
+    color:white;
+}
+
+.box{
+    border: 1px solid lime;
+    display:block;
+    position: absolute;
+    min-width:10px;
+    max-width:100px;
+    min-height:10px;
+    max-height:100px;
 }
