@@ -1,0 +1,27 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Use Angular's new @for control flow for table rows -->
+    @for (item of items; track item.id) {
+      <tr>
+        <td>{{ item.title | newLabel }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.completed ? 'Done' : 'Pending' }}</td>
+        <td>
+          <button class="btn btn-sm btn-primary" (click)="onEditItem(item)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="onDeleteItem(item)">Delete</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+<!--
+  Note: This uses Angular's recommended @for block for control flow in templates (Angular v17+).
+-->

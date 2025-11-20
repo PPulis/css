@@ -1,0 +1,9 @@
+<nav class="navbar navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h2">ToDo List</span>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <items [items]="items" (editItem)="onEditItem($event)" (deleteItem)="onDeleteItem($event)"></items>
+</div>

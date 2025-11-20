@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        <li><span>ID:</span>{{item.Id}} </li>
+        <li><span>Name:</span>{{item.Name}}</li>
+        <li><span>Price:</span>{{item.Price | currency:'EUR' : 'symbol' :'1.2-2' }}</li>
+    </ul>
+    <button type="button" class="btn btn-success" (click)="sendToTotal()">Add to Cart</button> //EVENT
+</div>

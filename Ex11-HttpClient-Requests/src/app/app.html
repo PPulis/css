@@ -1,0 +1,64 @@
+
+
+<div class="container">
+    <nav class="navbar navbar-dark bg-secondary mb-3">
+    <div class="container-fluid">
+      <span class="navbar-brand">Filtered Users</span>
+    </div>
+  </nav>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">Filter by ID</span>
+    <input type="number" min="1" (input)="filterUser($event)" class="form-control" placeholder="Enter user ID" />
+  </div>
+  @if(errorMessage){
+    <div class="alert alert-danger" role="alert">{{ errorMessage }}</div>
+  }
+  <div class="card mb-4">
+    <div class="card-header bg-primary text-white">Selected User</div>
+    <ul class="list-group list-group-flush">
+      @if(!user){
+        <li class="list-group-item text-muted">No user selected</li>
+      }
+      @else {
+        <li class="list-group-item"><strong>ID:</strong> {{user.id}}</li>
+        <li class="list-group-item"><strong>Name:</strong> {{user.name}}</li>
+        <li class="list-group-item"><strong>Username:</strong> {{user.username}}</li>
+        <li class="list-group-item"><strong>Email:</strong> {{user.email}}</li>
+        <li class="list-group-item"><strong>Phone:</strong> {{user.phone}}</li>
+        <li class="list-group-item"><strong>Website:</strong> {{user.website}}</li>
+      }
+    </ul>
+  </div>
+  <nav class="navbar navbar-dark bg-secondary mb-3">
+    <div class="container-fluid">
+      <span class="navbar-brand">All Users</span>
+    </div>
+  </nav>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (user of users; track user.id){
+        <tr>
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.phone}}</td>
+          <td>{{user.website}}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

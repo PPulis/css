@@ -9,6 +9,11 @@ Folders:
 - `Ex4-Todo` – Todo App (Part 1): list UI with property binding, interpolation, and control flow
 - `Ex5-Show-Hide-Image` – Conditional rendering and events to toggle an image with dynamic styling
 - `Ex6-Two-Way-Data-Binding` – Manual two-way effect using event binding + interpolation (no ngModel)
+ - `Ex7-Pipes` – Using Angular built-in and custom pipes for data transformation
+ - `Ex8-Nested-Components` – Parent/child components, pipes, and event communication
+ - `Ex9-Online-Supermarket` – Shopping cart UI with item components, pipes, and event handling
+ - `Ex10-ToDo-With-NC` – Advanced ToDo app with standalone components, custom pipes, and best practices
+ - `Ex11-HttpClient-Requests` – Fetching and displaying user data from an external API using Angular HTTP client
 
 All projects target Angular 20.3.x and use standalone APIs.
 
@@ -30,6 +35,13 @@ npm start
 Then open http://localhost:4200/
 
 Repeat for the other folders by changing directory to `Ex2-Components`, `Ex3-Templates-Interpolation-Blocks`, or `Ex4-Todo`.
+You can also run any other example (Ex5–Ex11) the same way:
+```bat
+cd <Example-Folder>
+npm install
+npm start
+```
+Then open http://localhost:4200/
 
 You can also run `Ex5-Show-Hide-Image` and `Ex6-Two-Way-Data-Binding` the same way.
 
@@ -158,7 +170,6 @@ npm test
 ```
 
 ---
-
 ## Ex6 – Two‑Way Data Binding (manual)
 Purpose:
 - Show the two‑way “effect” using event binding + interpolation (without `[(ngModel)]`): typing updates component state and reflects live in the view.
@@ -170,6 +181,101 @@ Look at:
 Run:
 ```bat
 cd Ex6-Two-Way-Data-Binding
+npm install
+npm start
+```
+
+Build/Test:
+```bat
+npm run build
+npm test
+```
+
+---
+
+## Ex7 – Pipes
+Purpose:
+- Demonstrates Angular built-in and custom pipes for transforming and displaying data in templates.
+
+Run:
+```bat
+cd Ex7-Pipes
+npm install
+npm start
+```
+
+Build/Test:
+```bat
+npm run build
+npm test
+```
+
+---
+
+## Ex8 – Nested Components & Pipes
+Purpose:
+- Shows parent/child component architecture, Angular pipes, and event communication. Features a product list with filtering, currency/date/titlecase pipes, and a custom star rating child component.
+
+Run:
+```bat
+cd Ex8-Nested-Components
+npm install
+npm start
+```
+
+Build/Test:
+```bat
+npm run build
+npm test
+```
+
+---
+
+## Ex9 – Online Supermarket
+Purpose:
+- Demonstrates a shopping cart UI with item components, pipes, and event handling. Includes a header, item list, and total card with add/reset actions.
+
+Run:
+```bat
+cd Ex9-Online-Supermarket
+npm install
+npm start
+```
+
+Build/Test:
+```bat
+npm run build
+npm test
+```
+
+---
+
+## Ex10 – ToDo With NC
+Purpose:
+- Advanced ToDo app using standalone components, custom pipes, Bootstrap integration, and best practices for table rendering and component architecture.
+
+Run:
+```bat
+cd Ex10-ToDo-With-NC
+npm install
+npm start
+```
+
+Build/Test:
+```bat
+npm run build
+npm test
+```
+
+---
+
+## Ex11 – HTTP Client Requests
+Purpose:
+- Demonstrates Angular's HTTP client to fetch and display user data from an external API. Uses standalone API, modern HTTP setup, and error handling.
+
+Run:
+```bat
+cd Ex11-HttpClient-Requests
 npm install
 npm start
 ```

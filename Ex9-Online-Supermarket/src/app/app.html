@@ -1,0 +1,14 @@
+    <app-header></app-header>
+    @for(item of items; track item.Id){
+            <app-single-item [item]="item" (price)="addToTotal($event)"></app-single-item>
+    }
+    <br/>
+
+    <div class="card" style="width: 100vw;">
+            <div class="card-body"><span>Total:</span>{{total | currency:'EUR' : 'symbol' :'1.2-2' }}</div>
+             <button type="button" class="btn btn-primary" (click)="resetTotal()">Reset Total</button> 
+    </div>    
+
+
+
+
